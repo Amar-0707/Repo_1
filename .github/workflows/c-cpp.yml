@@ -46,3 +46,11 @@ jobs:
       run: make check
     - name: make distcheck
       run: make distcheck
+
+    - name: Download a Build Artifact
+      uses: actions/download-artifact@v4.1.8
+      with:
+    # Name of the artifact to download. If unspecified, all artifacts for the run are downloaded.
+       name: down
+    # Destination path. Supports basic tilde expansion. Defaults to $GITHUB_WORKSPACE
+       path: ${{github.workplace}}
