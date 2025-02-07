@@ -33,7 +33,9 @@ jobs:
   Deploy:
 
     runs-on: ubuntu-latest
-
+    environment:
+      name: dev-amar
+    needs: build
     steps:
     - uses: actions/checkout@v4
     - name: configure
